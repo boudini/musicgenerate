@@ -30,7 +30,12 @@ import torch
 from . import builders
 from .encodec import CompressionModel
 
-
+HF_MODEL_CHECKPOINTS_MAP = {
+    "small": "GrandaddyShmax/musicgen-small",
+    "medium": "GrandaddyShmax/musicgen-medium",
+    "large": "GrandaddyShmax/musicgen-large",
+    "melody": "GrandaddyShmax/musicgen-melody",
+}
 def get_audiocraft_cache_dir() -> tp.Optional[str]:
     return os.environ.get('AUDIOCRAFT_CACHE_DIR', None)
 
